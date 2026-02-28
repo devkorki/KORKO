@@ -1,0 +1,18 @@
+{
+  "name": "korkmmo",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm -w server run dev\" \"npm -w client run dev\"",
+    "dev:server": "npm -w server run dev",
+    "dev:client": "npm -w client run dev",
+    "install:all": "npm install && npm -w server install && npm -w client install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
